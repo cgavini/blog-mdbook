@@ -1,2 +1,2 @@
 # blog-mdbook
-Blog
+Software Blog
