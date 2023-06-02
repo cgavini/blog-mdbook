@@ -4,3 +4,4 @@
 - [RabbitMQ CLI Tools](./2023-04-19_2.md)
 - [FFmpeg Trim Video](./2023-05-25.md)
 - [Free Disk Space Linux](./2023-06-01.md)
+- [Convert HEIC to JPG](./2023-06-02.md)
