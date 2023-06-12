@@ -5,3 +5,4 @@
 - [FFmpeg Trim Video](./2023-05-25.md)
 - [Free Disk Space Linux](./2023-06-01.md)
 - [Convert HEIC to JPG](./2023-06-02.md)
+- [Pip inside virtualenv installing globally](./2023-06-12.md)
