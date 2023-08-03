@@ -9,3 +9,4 @@
 - [Linux change users](./2023-06-12-1.md)
 - [Requests library proxy](./2023-06-14.md)
 - [AzureAD Access Token for non-Microsoft Graph Usage](./2023-07-30.md)
+- [Powershell replace text](./2023-08-02.md)
