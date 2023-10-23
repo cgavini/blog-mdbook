@@ -11,3 +11,4 @@
 - [AzureAD Access Token for non-Microsoft Graph Usage](./2023-07-30.md)
 - [Powershell replace text](./2023-08-02.md)
 - [PugiXML with Qt](./2023-08-21.md)
+- [Neovim restore Windows Terminal cursor on Exit](./2023-10-23.md)
