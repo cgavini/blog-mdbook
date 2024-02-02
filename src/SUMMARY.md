@@ -13,3 +13,4 @@
 - [PugiXML with Qt](./2023-08-21.md)
 - [Neovim restore Windows Terminal cursor on Exit](./2023-10-23.md)
 - [Frappe Gantt Chart - JS](./2023-10-27.md)
+- [Decrypt PDF with PyPDF2](./2023-2-1.md)
