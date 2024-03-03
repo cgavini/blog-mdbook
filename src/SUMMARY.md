@@ -14,3 +14,4 @@
 - [Neovim restore Windows Terminal cursor on Exit](./2023-10-23.md)
 - [Frappe Gantt Chart - JS](./2023-10-27.md)
 - [Decrypt PDF with PyPDF2](./2024-2-1.md)
+- [Postgres Upsert](./2024-3-3.md)
