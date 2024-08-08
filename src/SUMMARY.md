@@ -22,3 +22,5 @@
 - [Windows disk cleanup script](./2024-06-25.md)
 - [Distutils and Python 3.12](./2024-07-26.md)
 - [Zip and Unzip Linux](./2024-08-08.md)
+- [Vim find all in file](./2024-08-08-02.md)
+
