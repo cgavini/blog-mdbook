@@ -20,3 +20,5 @@
 - [Cadence report command line tool](./2024-5-3.md)
 - [User not granted requested logon](./2024-5-21.md)
 - [Windows disk cleanup script](./2024-06-25.md)
+- [Distutils and Python 3.12](./2024-07-26.md)
+- [Zip and Unzip Linux](./2024-08-08.md)
