@@ -25,4 +25,5 @@
 - [Vim find all in file](./2024-08-08-02.md)
 - [Gvim windows .vimrc](./2024-08-12.md)
 - [git diff two branches](./2024-08-16.md)
+- [Clear MEF cache](./2024-08-30.md)
 
