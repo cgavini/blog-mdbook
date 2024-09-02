@@ -26,4 +26,5 @@
 - [Gvim windows .vimrc](./2024-08-12.md)
 - [git diff two branches](./2024-08-16.md)
 - [Clear MEF cache](./2024-08-30.md)
+- [Evite CSV import](./2024-09-02.md)
 
