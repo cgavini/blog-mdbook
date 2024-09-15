@@ -28,4 +28,5 @@
 - [Clear MEF cache](./2024-08-30.md)
 - [Evite CSV import](./2024-09-02.md)
 - [Reformatting flash drive after using Balena Etcher](./2024-09-12.md)
+- [Typst snippets for VSCode](./2024-09-15.md)
 
