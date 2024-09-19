@@ -31,4 +31,5 @@
 - [Typst snippets for VSCode](./2024-09-15.md)
 - [Gnome Tweaks](./2024-09-17.md)
 - [Powershell Notes](./2024-09-19.md)
+- [Visual Studio Code Vim](./2024-09-19_1.md)
 
