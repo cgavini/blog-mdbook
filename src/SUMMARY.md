@@ -32,4 +32,5 @@
 - [Gnome Tweaks](./2024-09-17.md)
 - [Powershell Notes](./2024-09-19.md)
 - [Visual Studio Code Vim](./2024-09-19_1.md)
+- [Powershell remote execution with params](./2024-09-23.md)
 
