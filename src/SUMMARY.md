@@ -34,4 +34,5 @@
 - [Visual Studio Code Vim](./2024-09-19_1.md)
 - [Powershell remote execution with params](./2024-09-23.md)
 - [ffmpeg stitch videos together](./2024-09-30.md)
-
+- [ImageMagick .ico from .png](./2024-10-01.md)
+- [extern 'C'](./2024-12-04.md)
