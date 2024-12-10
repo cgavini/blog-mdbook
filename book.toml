@@ -6,5 +6,6 @@ src = "src"
 title = "Software Blog"
 
 [output.html]
-theme = "Navy"
+default-theme = "light"
+preferred-dark-theme = "navy"
 additional-css = ["./theme/catppuccin.css"]
