@@ -37,3 +37,4 @@
 - [ImageMagick .ico from .png](./2024-10-01.md)
 - [extern C](./2024-12-04.md)
 - [Git Credential Manager](./2024-12-05.md)
+- [Inf2Cat](./2025-01-16.md)
