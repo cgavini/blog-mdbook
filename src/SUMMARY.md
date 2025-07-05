@@ -40,3 +40,4 @@
 - [Inf2Cat](./2025-01-16.md)
 - [Read Windows Registry value from C](./2025-02-07.md)
 - [Get path of executing assembly in C#](./2025-03-11.md)
+- [Python check object reference equality](./2025-07-04.md)
