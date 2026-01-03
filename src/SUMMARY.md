@@ -43,4 +43,4 @@
 - [Python check object reference equality](./2025-07-04.md)
 - [Windows Driver Framework General Strategy](./2025-07-29.md)
 - [Disable LSO](./2025-12-01.md)
-- [Image Montage with ffmpeg]()
+- [Image Montage with ffmpeg](./2026-01-02.md)
