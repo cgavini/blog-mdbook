@@ -44,3 +44,4 @@
 - [Windows Driver Framework General Strategy](./2025-07-29.md)
 - [Disable LSO](./2025-12-01.md)
 - [Image Montage with ffmpeg](./2026-01-02.md)
+- [GitHub Actions GITHUB_ENV](./2026-01-06.md)
