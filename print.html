@@ -1,0 +1,1039 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Software Blog</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-3ecd71a4.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-c8111c03.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Software Blog</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="connect-to-localhost-from-docker-container"><a class="header" href="#connect-to-localhost-from-docker-container">Connect to localhost from Docker container</a></h1>
+<p>For Win and Mac:</p>
+<ul>
+<li><code>localhost</code> and <code>127.0.0.1</code> – These resolve to the container.</li>
+<li><code>host.docker.internal</code> – This resolves to the outside host.</li>
+</ul>
+<p><a href="https://www.howtogeek.com/devops/how-to-connect-to-localhost-within-a-docker-container/">Reference</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="rabbitmq-cli-tools"><a class="header" href="#rabbitmq-cli-tools">RabbitMQ CLI tools</a></h1>
+<p>Error Message:</p>
+<p><code>CLI tool fails to authenticate with the server (e.g. due to CLI tool's Erlang cookie not matching that of the server)</code></p>
+<p>Solution from <a href="https://stackoverflow.com/questions/47874958/rabbitmq-failed-to-start-tcp-connection-succeeded-but-erlang-distribution-faile">here</a></p>
+<p>Ensure cookies are synchronized across 1, 2 and Optionally 3 below</p>
+<ol>
+<li>
+<p><code>%HOMEDRIVE%%HOMEPATH%\.erlang.cookie</code> (usually <code>C:\Users\%USERNAME%\.erlang.cookie</code> for user <code>%USERNAME%</code>) if both the <code>HOMEDRIVE</code> and <code>HOMEPATH</code> environment variables are set</p>
+</li>
+<li>
+<p><code>%USERPROFILE%\.erlang.cookie</code> (usually <code>C:\Users\%USERNAME%\.erlang.cookie</code>) if <code>HOMEDRIVE</code> and <code>HOMEPATH</code> are not both set</p>
+</li>
+<li>
+<p>For the RabbitMQ Windows service - <code>%USERPROFILE%\.erlang.cookie</code> (usually <code>C:\WINDOWS\system32\config\systemprofile</code>)</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="trimming-video-using-ffmpeg"><a class="header" href="#trimming-video-using-ffmpeg">Trimming video using FFMpeg</a></h1>
+<p>See <a href="https://shotstack.io/learn/use-ffmpeg-to-trim-video/">here</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="free-disk-space-linux"><a href="#free-disk-space-linux" class="header">Free Disk Space Linux</a></h1>
+<h2 id="freeing-up-disk-space---linux"><a class="header" href="#freeing-up-disk-space---linux">Freeing up disk space - Linux</a></h2>
+<p>Reference: <a href="https://itsfoss.com/free-up-space-ubuntu-linux/">article</a></p>
+<ul>
+<li><code>sudo apt-get autoremove</code></li>
+<li>Remove <code>apt</code> cache: <code>sudo apt-get clean</code></li>
+<li><code>sudo journalctl --vacuum-time=3d</code></li>
+<li>Remove old revisions of snaps:</li>
+</ul>
+<pre><code class="language-sh">#!/bin/bash
+# Removes old revisions of snaps
+# CLOSE ALL SNAPS BEFORE RUNNING THIS
+set -eu
+snap list --all | awk '/disabled/{print $1, $3}' |
+    while read snapname revision; do
+        snap remove "$snapname" --revision="$revision"
+    done
+</code></pre>
+<ul>
+<li>Clean the thumbnail cache:</li>
+</ul>
+<p><code>rm -rf ~/.cache/thumbnails/*</code></p>
+<p>Can use <code>ncdu</code> to check disk space from command line as well.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="imagemagick-script-for-converting-heic-to-jpg"><a class="header" href="#imagemagick-script-for-converting-heic-to-jpg">ImageMagick script for converting .heic to .jpg</a></h1>
+<pre><code class="language-py">import os
+import subprocess
+
+lst = os.listdir(".")
+for entry in lst:
+    if entry.lower().endswith(".heic"):
+        fname = os.path.basename(entry).split(".")[0] + ".jpg"
+        print(f"Converting {entry} to {fname}")
+        ran_proc = subprocess.run(["magick",entry,"-quality","100%",fname])
+        if ran_proc.stdout:
+            print(f"Stdout is {ran_proc.stdout}")
+        if ran_proc.stderr:
+            print(f"Stderr is {ran_proc.stderr}")
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pip-inside-virtualenv-installing-globally"><a href="#pip-inside-virtualenv-installing-globally" class="header">Pip inside virtualenv installing globally</a></h1>
+<h2 id="pip-installing-packages-globally"><a class="header" href="#pip-installing-packages-globally"><code>pip</code> installing packages globally</a></h2>
+<p>When <code>pip</code> inside virtualenv is installing packages globally check the following:</p>
+<p>Try checking your bin/pip and bin/activate scripts. In bin/pip, look at the shebang. Is it correct? If not, correct it. Then on line ~42 in your bin/activate, check to see if your virtualenv path is right. It’ll look something like this</p>
+<p><code>VIRTUAL_ENV="/Users/me/path/to/virtual/environment"</code></p>
+<blockquote>
+<p>If that fails, run the virtual environments pip with its full path.</p>
+</blockquote>
+<p><a href="https://stackoverflow.com/questions/20952797/pip-installing-in-global-site-packages-instead-of-virtualenv">Reference</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="linux-change-users"><a href="#linux-change-users" class="header">Linux change users</a></h1>
+<h2 id="how-to-change-user"><a class="header" href="#how-to-change-user">How to change user</a></h2>
+<p><code>su - john # if john is the user</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="requests-library-proxy"><a href="#requests-library-proxy" class="header">Requests library proxy</a></h1>
+<h2 id="python-requests-library-using-proxy"><a class="header" href="#python-requests-library-using-proxy">Python Requests library using proxy</a></h2>
+<p>Set environment variables <code>http_proxy</code> and <code>https_proxy</code>. These can be used by <code>pip</code> as well</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="azuread-access-token-for-non-microsoft-graph-usage"><a href="#azuread-access-token-for-non-microsoft-graph-usage" class="header">AzureAD Access Token for non-Microsoft Graph Usage</a></h1>
+<h2 id="using-azure-ad-access-token-for-non-microsoft-graph-api"><a class="header" href="#using-azure-ad-access-token-for-non-microsoft-graph-api">Using Azure AD access token for non Microsoft Graph API</a></h2>
+<p>See <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/issues/521#issuecomment-577400515">here</a>. They key is that the scopes
+array should have a single element with: <code>"&lt;YourClientId&gt;/.default</code>.</p>
+<p>When following the example <a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-windows-desktop">here</a>, make sure to replace
+the scopes with <code>"&lt;YourClientId&gt;/.default</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="powershell-replace-text"><a href="#powershell-replace-text" class="header">Powershell replace text</a></h1>
+<h2 id="replace-text-using-powershell"><a class="header" href="#replace-text-using-powershell">Replace text using Powershell</a></h2>
+<pre><code class="language-ps1">(Get-Content .\file.txt) -replace "!", ","  | Set-Content -Path .\replaced.txt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pugixml-with-qt"><a href="#pugixml-with-qt" class="header">PugiXML with Qt</a></h1>
+<h2 id="using-pugixml-with-qt"><a class="header" href="#using-pugixml-with-qt">Using PugiXML with Qt</a></h2>
+<ul>
+<li>Make sure to include pugi’s cpp and headers in the .pro file</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="neovim-restore-windows-terminal-cursor-on-exit-1"><a href="#neovim-restore-windows-terminal-cursor-on-exit-1" class="header">Neovim restore Windows Terminal cursor on Exit</a></h1>
+<h2 id="neovim-restore-windows-terminal-cursor-on-exit"><a class="header" href="#neovim-restore-windows-terminal-cursor-on-exit">Neovim restore Windows Terminal cursor on exit</a></h2>
+<pre><code class="language-lua">vim.cmd [[
+  autocmd VimLeave * set guicursor=a:ver20a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
+]]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="frappe-gantt-chart---js"><a href="#frappe-gantt-chart---js" class="header">Frappe Gantt Chart - JS</a></h1>
+<h2 id="frappe-gantt-chart"><a class="header" href="#frappe-gantt-chart">Frappe Gantt chart</a></h2>
+<p>See <a href="https://frappe.io/gantt">here</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="decrypt-pdf-with-pypdf2"><a href="#decrypt-pdf-with-pypdf2" class="header">Decrypt PDF with PyPDF2</a></h1>
+<h2 id="using-pypdf2-to-decrypt-a-pdf"><a class="header" href="#using-pypdf2-to-decrypt-a-pdf">Using PyPDF2 to decrypt a PDF</a></h2>
+<p>See <a href="https://stackoverflow.com/questions/26130032/open-a-protected-pdf-file-in-python/26537710#26537710">here</a></p>
+<p>Might need to install <code>pyCryptodome</code> first <code>pip install pycryptodome</code></p>
+<pre><code class="language-py"># Decrypt password-protected PDF in Python.
+# cleaned-up version of http://stackoverflow.com/a/26537710/329263
+# 
+# Requirements:
+# pip install PyPDF2
+#
+# Usage: decrypt_pdf('encrypted.pdf', 'decrypted.pdf', 'secret_password')
+import sys
+
+from PyPDF2 import PdfFileReader, PdfFileWriter
+
+def decrypt_pdf(input_path, output_path, password):
+  with open(input_path, 'rb') as input_file, \
+    open(output_path, 'wb') as output_file:
+    reader = PdfFileReader(input_file)
+    reader.decrypt(password)
+
+    writer = PdfFileWriter()
+
+    for i in range(reader.getNumPages()):
+      writer.addPage(reader.getPage(i))
+
+    writer.write(output_file)
+    print(f"Done. wrote to {output_file}")
+
+if __name__ == '__main__':
+  input_file = sys.argv[1]
+  output_file = sys.argv[2]
+  password = sys.argv[3]
+  # example usage:
+  decrypt_pdf(input_file,output_file,password)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="postgres-upsert"><a href="#postgres-upsert" class="header">Postgres Upsert</a></h1>
+<h2 id="postgres-upsert-operation"><a class="header" href="#postgres-upsert-operation">Postgres UPSERT operation</a></h2>
+<p>Source: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-upsert/">here</a></p>
+<p>Excerpt:</p>
+<pre><code class="language-sql">CREATE TABLE inventory(
+   id INT PRIMARY KEY,
+   name VARCHAR(255) NOT NULL,
+   price DECIMAL(10,2) NOT NULL,
+   quantity INT NOT NULL
+);
+
+INSERT INTO inventory(id, name, price, quantity)
+VALUES
+	(1, 'A', 15.99, 100),
+	(2, 'B', 25.49, 50),
+	(3, 'C', 19.95, 75)
+RETURNING *;
+</code></pre>
+<p>Here, <code>EXCLUDED</code> means “use the new value”</p>
+<pre><code class="language-sql">INSERT INTO inventory (id, name, price, quantity)
+VALUES (1, 'A', 16.99, 120)
+ON CONFLICT(id) 
+DO UPDATE SET
+  price = EXCLUDED.price,
+  quantity = EXCLUDED.quantity;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="update-forked-repo-with-rebase"><a href="#update-forked-repo-with-rebase" class="header">Update forked repo with rebase</a></h1>
+<h2 id="git-rebase-into-forked-repo"><a class="header" href="#git-rebase-into-forked-repo">Git rebase into forked repo</a></h2>
+<p>Excerpted from <a href="https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a">here</a></p>
+<ol>
+<li>Add the remote (original repo that you forked) and call it “upstream”</li>
+</ol>
+<pre><code class="language-sh">git remote add upstream https://github.com/original-repo/goes-here.git
+</code></pre>
+<ol start="2">
+<li>Fetch all branches of remote upstream</li>
+</ol>
+<pre><code class="language-sh">git fetch upstream
+</code></pre>
+<ol start="3">
+<li>Rewrite your master with upstream’s master using git rebase.</li>
+</ol>
+<pre><code class="language-sh">git rebase upstream/master
+</code></pre>
+<ol start="4">
+<li>Push your updates to master. You may need to force the push with “–force”.</li>
+</ol>
+<pre><code class="language-sh">git push origin master --force
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="msal-net-desktop-parsing-ws-trust-issue"><a href="#msal-net-desktop-parsing-ws-trust-issue" class="header">MSAL .NET Desktop Parsing ws-trust issue</a></h1>
+<h2 id="error-parsing-ws-trust-response"><a class="header" href="#error-parsing-ws-trust-response"><code>Error parsing ws-trust response</code></a></h2>
+<p>If this happens, use <code>AcquireTokenInteractive</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cadence-report-command-line-tool-1"><a href="#cadence-report-command-line-tool-1" class="header">Cadence report command line tool</a></h1>
+<h2 id="cadence-report-command-line-tool"><a class="header" href="#cadence-report-command-line-tool">Cadence <code>report</code> command line tool</a></h2>
+<p>To get at the <code>Quick Reports</code> from the command line, use the <code>report</code> command line tool like so:</p>
+<pre><code class="language-ps1">report -v elp &lt;path to .brd file&gt; &lt;output.txt&gt;
+</code></pre>
+<p>To see a list of all the command line parameters type</p>
+<pre><code>report -help
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="user-has-not-been-granted-requested-logon"><a class="header" href="#user-has-not-been-granted-requested-logon"><code>User has not been granted requested logon</code></a></h1>
+<p>If seeing this error, follow the steps <a href="https://learn.microsoft.com/en-us/answers/questions/760241/the-user-has-not-been-granted-the-requested-logon">here</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="windows-disk-cleanup-script"><a class="header" href="#windows-disk-cleanup-script">Windows disk cleanup script</a></h1>
+<pre><code class="language-ps1">Remove-Item -Path "$env:tmp\" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:userprofile\appdata\local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:appdata\Code\Service Worker\CacheStorage\" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:appdata\Teams\Service Worker\CacheStorage\" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:userprofile\appdata\local\Microsoft\Edge\User Data\" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:userprofile\appdata\local\Microsoft\vscode-cpptools\" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:userprofile\Downloads\" -Recurse -Force -ErrorAction SilentlyContinue
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="distutils-and-python-312"><a class="header" href="#distutils-and-python-312">Distutils and Python 3.12</a></h1>
+<p>Install <code>setuptools</code> using <code>pip</code> instead as python 3.12 removed <code>distutils</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="zip-and-unzip-linux"><a href="#zip-and-unzip-linux" class="header">Zip and Unzip Linux</a></h1>
+<h2 id="zip-and-unzip-on-linux"><a class="header" href="#zip-and-unzip-on-linux">Zip and unzip on Linux</a></h2>
+<pre><code>zip -r &lt;backup.zip&gt; &lt;directory_name&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-sh">zip -r backup.zip my_folder/
+</code></pre>
+<p>Notice that the <code>/</code> is very important! To unzip:</p>
+<pre><code class="language-sh">unzip [file_name.zip]
+</code></pre>
+<p><a href="https://www.geeksforgeeks.org/zip-command-in-linux-with-examples/">Source</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="vim-find-all-in-file"><a href="#vim-find-all-in-file" class="header">Vim find all in file</a></h1>
+<h2 id="vim-find-all-in-file-and-show-in-quickfix-window"><a class="header" href="#vim-find-all-in-file-and-show-in-quickfix-window">Vim find all in file and show in quickfix window</a></h2>
+<pre><code>:vimgrep /pattern/ %
+</code></pre>
+<p>and then</p>
+<pre><code>:copen
+</code></pre>
+<p>or</p>
+<pre><code>:cwindow
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gvim-windows-vimrc"><a href="#gvim-windows-vimrc" class="header">Gvim windows .vimrc</a></h1>
+<h2 id="vimrc-for-gvim-windows"><a class="header" href="#vimrc-for-gvim-windows">.vimrc for gvim (Windows)</a></h2>
+<pre><code>source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+
+imap jk &lt;Esc&gt;
+au VimEnter * imap jk &lt;Esc&gt;
+"set guifont=Consolas:h11
+set guifont=Cascadia\ Code:h12
+set number
+"set guifont=Cascadia Code:h11
+colorscheme onedark
+set encoding=utf-8
+"colorscheme summerfruit
+
+set nobackup       "no backup files
+set nowritebackup  "only in case you don't want a backup file while editing
+set noswapfile     "no swap files
+set noundofile
+
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoread
+set autochdir
+
+autocmd BufNewFile,BufRead *.csv   set filetype=csv_semicolon
+autocmd BufNewFile,BufRead *.dat   set filetype=csv_pipe
+
+" let g:plug_shallow = 0
+call plug#begin('~/.vim/plugged')
+" Plug 'mechatroner/rainbow_csv'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'PProvost/vim-ps1'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'junegunn/fzf', { 'do': { -&gt; fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'shime/vim-livedown'
+call plug#end()
+
+" Live down section reference
+
+" launch the Livedown server and preview your markdown file
+" :LivedownPreview
+
+" stop the Livedown server
+" :LivedownKill
+
+" launch/kill the Livedown server
+" :LivedownToggle
+
+nmap mt :LivedownToggle&lt;CR&gt;
+
+" End Live down section!
+
+" &lt; Other Plugins, if they exist &gt;
+
+" Plug 'fatih/vim-go'
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'dense-analysis/ale'
+" call plug#end()
+
+
+" Use the internal diff if available.
+" Otherwise use the special 'diffexpr' for Windows.
+if &amp;diffopt !~# 'internal'
+  set diffexpr=MyDiff()
+endif
+function MyDiff()
+  let opt = '-a --binary '
+  if &amp;diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &amp;diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg1 = substitute(arg1, '!', '\!', 'g')
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg2 = substitute(arg2, '!', '\!', 'g')
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let arg3 = substitute(arg3, '!', '\!', 'g')
+  if $VIMRUNTIME =~ ' '
+    if &amp;sh =~ '\&lt;cmd'
+      if empty(&amp;shellxquote)
+        let l:shxq_sav = ''
+        set shellxquote&amp;
+      endif
+      let cmd = '"' . $VIMRUNTIME . '\diff"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  let cmd = substitute(cmd, '!', '\!', 'g')
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' &gt; ' . arg3
+  if exists('l:shxq_sav')
+    let &amp;shellxquote=l:shxq_sav
+  endif
+endfunction
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="git-diff-two-branches"><a href="#git-diff-two-branches" class="header">git diff two branches</a></h1>
+<h2 id="git-compare-file-in-different-branches"><a class="header" href="#git-compare-file-in-different-branches"><code>git</code> compare file in different branches</a></h2>
+<p>See <a href="https://stackoverflow.com/questions/9834689/how-can-i-see-the-differences-between-two-branches">here</a></p>
+<p>The syntax is as follows</p>
+<pre><code>git difftool [| diff] branch1..branch2 -- &lt;path/to/file/file_to_compare&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-sh">git difftool branch1..branch2 -- ./src/myfile.py
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="clear-mef-cache"><a href="#clear-mef-cache" class="header">Clear MEF cache</a></h1>
+<h2 id="clearing-mef-component-cache"><a class="header" href="#clearing-mef-component-cache">Clearing MEF Component cache</a></h2>
+<p>Download the “Clear MEF Component cache” extension as shown <a href="https://learn.microsoft.com/en-us/answers/questions/1571533/visual-studio-2022-could-not-load-file-or-assembly">here</a> if constantly seeing “Could not load file or assembly” when saving files in Visual Studio 2022.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="evite-csv-import-1"><a href="#evite-csv-import-1" class="header">Evite CSV import</a></h1>
+<h2 id="evite-csv-import"><a class="header" href="#evite-csv-import">Evite CSV import</a></h2>
+<p>The CSV has to be in the following format (pasted from reference link below):</p>
+<ul>
+<li>Column A: First Name (and/or last name, plus any additional guest names if adding families under one contact).</li>
+<li>Column B: Email address only (can be left blank if adding guests by phone instead).</li>
+<li>Column C: Phone numbers only (can be left blank if adding guests by email instead).</li>
+<li>No headers.</li>
+<li>No special characters or symbols.</li>
+<li>No additional columns filled in.</li>
+</ul>
+<p>Sample:</p>
+<pre><code class="language-csv">Luke Skywalker,,111-111-1111
+Han Solo,,999-999-9999
+Chewbacca,,333-333-3333
+Obi-Wan Kenobi,,222-222-2222
+</code></pre>
+<p><a href="https://support.evite.com/support/solutions/articles/72000576201-upload-guest-list-excel-spreadsheet">Reference</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="reformatting-flash-drive-after-using-balena-etcher"><a href="#reformatting-flash-drive-after-using-balena-etcher" class="header">Reformatting flash drive after using Balena Etcher</a></h1>
+<h2 id="recovering-flash-drive-after-using-balena-etcher"><a class="header" href="#recovering-flash-drive-after-using-balena-etcher">Recovering flash drive after using Balena Etcher</a></h2>
+<p>Summary:</p>
+<pre><code class="language-ps1">list disk
+select disk N # make sure you select the right one from the listing
+clean # cleans the disk
+</code></pre>
+<p>“Add a partition back to it and format it, so that it acts like a normal storage device. Do the following”</p>
+<pre><code class="language-ps1">create partition primary
+select partition 1
+format quick
+</code></pre>
+<p><a href="https://blog.balena.io/did-etcher-break-my-usb-sd-card/">Reference</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="typst-snippets-for-vscode-1"><a href="#typst-snippets-for-vscode-1" class="header">Typst snippets for VSCode</a></h1>
+<h2 id="typst-snippets-for-vscode"><a class="header" href="#typst-snippets-for-vscode">Typst snippets for VSCode</a></h2>
+<pre><code class="language-json">{
+	// Place your snippets for typst here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"AddFigure": {
+		"prefix": "addfig",
+		"body" : [
+			"#figure(image(\"$1\",width:70%),caption:[$2])"
+		],
+		"description": "Add figure to typst document"
+	},
+     "AddTable": {
+        "prefix": "addtable",
+        "body": [
+            "#table(columns: (auto,auto)",
+            "table.header([*$1*],[*$2*])", 
+            "[$3], [$4])"
+        ],
+        "description": "Add table to typst document"
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gnome-tweaks"><a href="#gnome-tweaks" class="header">Gnome Tweaks</a></h1>
+<h2 id="gnome-tweaks-app"><a class="header" href="#gnome-tweaks-app">GNOME Tweaks app</a></h2>
+<p>Gnome tweaks is a handy app to quickly set appearance and other settings in Ubuntu (works as of Noble)</p>
+<p>To install: <code>sudo apt install gnome-tweaks</code>
+To run: Type in <code>gnome-tweaks</code> in terminal</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="powershell-notes-1"><a href="#powershell-notes-1" class="header">Powershell Notes</a></h1>
+<h2 id="powershell-notes"><a class="header" href="#powershell-notes">Powershell Notes</a></h2>
+<h3 id="get-names-of-all-directories-in-current-script-root"><a class="header" href="#get-names-of-all-directories-in-current-script-root">Get names of all directories in current script root:</a></h3>
+<pre><code class="language-ps1">$dirs = Get-ChildItem $PSScriptRoot |
+       Where-Object {$_.PSIsContainer} | # analog of `.Where` Linq function in C#
+       Foreach-Object {$_.Name} # analog of `.Select` Linq function in C#
+</code></pre>
+<p>Reference: <a href="https://stackoverflow.com/questions/13998777/storing-directory-folder-names-into-array-powershell">here</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="visual-studio-code-vim"><a href="#visual-studio-code-vim" class="header">Visual Studio Code Vim</a></h1>
+<h2 id="visual-studio-code-vim-bindings-quickstart-notes"><a class="header" href="#visual-studio-code-vim-bindings-quickstart-notes">Visual Studio Code vim bindings quickstart Notes</a></h2>
+<pre><code class="language-json">{
+    "editor.fontSize": 16,
+    "vim.insertModeKeyBindings": [
+     {
+         "before": ["j", "k"],
+         "after": ["&lt;esc&gt;"]
+     },
+    ],
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": false,
+
+    
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="powershell-remote-execution-with-params"><a href="#powershell-remote-execution-with-params" class="header">Powershell remote execution with params</a></h1>
+<h2 id="powershell-remote-execution-with-parameters"><a class="header" href="#powershell-remote-execution-with-parameters">Powershell remote execution with parameters</a></h2>
+<pre><code class="language-ps1">Invoke-Command -ComputerName "computer-name" -FilePath "path\to\local\script.ps1" -ArgumentList "Argument1","Argument2"
+</code></pre>
+<p>Sample <code>script.ps1</code></p>
+<pre><code class="language-ps1">param (
+  [Parameter(Position=0)][string]$param1,
+  [Parameter(Position=1)][string]$param2
+)
+
+Write-Output "Param1: $param1, Param2: $param2"
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ffmpeg-stitch-videos-together-1"><a href="#ffmpeg-stitch-videos-together-1" class="header">ffmpeg stitch videos together</a></h1>
+<h2 id="ffmpeg-stitch-videos-together"><a class="header" href="#ffmpeg-stitch-videos-together">FFMpeg stitch videos together</a></h2>
+<p>To concatenate videos without re-encoding:</p>
+<pre><code class="language-bash">/Applications/ffmpeg -f concat -safe 0 -i ./all.txt -c copy entire.mp4
+</code></pre>
+<p>Contents of all.txt:</p>
+<pre><code>file './C0043.MP4'
+file './C0044.MP4'
+</code></pre>
+<p>Command to create compressed MP4:</p>
+<pre><code class="language-bash">ffmpeg -i entire.mp4 -vcodec libx265 -crf 28 output.mp4
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="imagemagick-ico-from-png"><a href="#imagemagick-ico-from-png" class="header">ImageMagick .ico from .png</a></h1>
+<h2 id="imagemagick-notes"><a class="header" href="#imagemagick-notes">ImageMagick Notes</a></h2>
+<ul>
+<li>To make a .ico file from a PNG:</li>
+</ul>
+<p><code>convert -background transparent "icons8-bot-48.png" -define icon:auto-resize=16,24,32,48,64,72,96,128,256 "bot.ico"</code></p>
+<ul>
+<li>To remove background:</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="extern-c"><a href="#extern-c" class="header">extern C</a></h1>
+<h2 id="using-extern-c-in-c"><a class="header" href="#using-extern-c-in-c">Using <code>extern C</code> in C++</a></h2>
+<p>In C++, when using C libraries (with source code) do the following in the header file that is being <code>#include</code>d</p>
+<pre><code class="language-cpp">#ifdef __cplusplus
+extern "C"
+{
+#endif
+</code></pre>
+<pre><code class="language-cpp">//content of header file
+</code></pre>
+<pre><code class="language-cpp">#ifdef __cplusplus
+}
+#endif
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="git-credential-manager-1"><a href="#git-credential-manager-1" class="header">Git Credential Manager</a></h1>
+<h2 id="git-credential-manager"><a class="header" href="#git-credential-manager">Git Credential Manager</a></h2>
+<p>To use Git Credential Manager, make sure the following is set in the global <code>.gitconfig</code>:</p>
+<pre><code>[credential "https://github.com"]
+	helper = manager
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="inf2cat"><a href="#inf2cat" class="header">Inf2Cat</a></h1>
+<h2 id="inf2cat-tool"><a class="header" href="#inf2cat-tool"><code>Inf2Cat</code> tool</a></h2>
+<p>This tool is used to create a <code>.cat</code> file for PnP drivers that need a detached signature.</p>
+<p>Workflow:</p>
+<ol>
+<li>Use <code>Inf2Cat</code> to create a <code>.cat</code> file</li>
+<li>Sign the driver <code>.sys</code> file using <code>signtool</code></li>
+<li>The <code>.cat</code> file must be referred to by the <code>.inf</code> file</li>
+<li>Keep the <code>.cat</code>, <code>.sys</code>, and the <code>.inf</code> files in the same directory</li>
+<li>Use <code>pnputil</code> and the <code>.inf</code> file to install the driver</li>
+</ol>
+<pre><code>"C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\Inf2Cat.exe"
+Version 1.0.0.0
+Runs driver signability tests and creates the catalog(s).
+
+INF2CAT /driver:path /os:operatingSystem1[,os2]...
+        [/nocat] [/verbose]
+        [/drm[:file1[,file2]...]]
+        [/pe[:file1[,file2]...]]
+        [/pageHashes[:file1][,file2]...]]
+
+  /driver (/drv)    Indicates the path to the driver package follows.
+
+  path              Specifies the path to the driver package.
+
+  /os               Indicates the operating system(s) targeted by the driver
+                    package follows. The targeted operating system(s) is a
+                    comma separated list of the following values:
+
+  operatingSystem1  2000
+
+                    XP_X86           Server2003_X86
+                    XP_X64           Server2003_X64
+                                     Server2003_IA64
+
+                    Vista_X86        Server2008_X86
+                    Vista_X64        Server2008_X64
+                                     Server2008_IA64
+
+                    7_X86
+                    7_X64            Server2008R2_X64
+                                     Server2008R2_IA64
+
+                    8_X86
+                    8_X64            Server8_X64
+                    8_ARM
+
+                    6_3_X86
+                    6_3_X64          Server6_3_X64
+                    6_3_ARM
+
+                    10_X86
+                    10_X64           Server10_X64
+                                     Server10_ARM64
+
+                    10_AU_X86
+                    10_AU_X64        Server2016_X64
+
+                    10_RS2_X86
+                    10_RS2_X64
+
+                    10_RS3_X86
+                    10_RS3_X64
+                    10_RS3_ARM64
+                    10_RS4_X86
+                    10_RS4_X64
+                    10_RS4_ARM64
+                    10_RS5_X86
+                    10_RS5_X64       ServerRS5_X64
+                    10_RS5_ARM64     ServerRS5_ARM64
+                    10_19H1_X86
+                    10_19H1_X64
+                    10_19H1_ARM64
+                    10_VB_X86
+                    10_VB_X64
+                    10_VB_ARM64
+                    ServerFE_X64
+                    ServerFE_ARM64
+                    10_CO_X64
+                    10_CO_ARM64
+                    10_NI_X64
+                    10_NI_ARM64
+                    10_GE_X64
+                    10_GE_ARM64
+                    Server2025_X64
+                    Server2025_ARM64
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="check-if-virtualization-based-security-is-enabled"><a class="header" href="#check-if-virtualization-based-security-is-enabled">Check if Virtualization Based Security is enabled</a></h1>
+<pre><code class="language-cpp">/// &lt;summary&gt;
+/// Checks if Virtualization Based Security (VBS) is enabled
+/// &lt;/summary&gt;
+/// &lt;returns&gt;TRUE if enabled, FALSE otherwise&lt;/returns&gt;
+bool IsVbsEnabled() {
+	HKEY  hKey;
+	DWORD dwValue = 0;
+	DWORD dwType = REG_DWORD;
+	DWORD dwSize = sizeof(DWORD);
+	bool isEnabled = false;
+	// Open the registry key
+	if (RegOpenKeyEx(HKEY_LOCAL_MACHINE,
+		TEXT("SYSTEM\\CurrentControlSet\\Control\\DeviceGuard"),
+		0,
+		KEY_QUERY_VALUE,
+		&amp;hKey) == ERROR_SUCCESS) {
+		if (RegQueryValueEx(hKey, TEXT("EnableVirtualizationBasedSecurity"), NULL, &amp;dwType, (LPBYTE)&amp;dwValue, &amp;dwSize) == ERROR_SUCCESS) {
+			if (dwValue == 1) {
+				printf("Virtualization Based Security is enabled.\n");
+				isEnabled = true;
+			}
+			else {
+				printf("Virtualization Based Security is disabled.\n");
+				isEnabled = false;
+			}
+		}
+		else {
+			printf("Couldn't read registry key, vbs must be disabled\n");
+			isEnabled = false;
+		}
+		RegCloseKey(hKey);
+	}
+	else {
+		printf("Error accessing registry key.\n");
+		isEnabled = false;
+	}
+	return isEnabled;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="get-path-of-executing-assembly-in-c"><a href="#get-path-of-executing-assembly-in-c" class="header">Get path of executing assembly in C#</a></h1>
+<h2 id="get-location-of-executing-assembly-in-c"><a class="header" href="#get-location-of-executing-assembly-in-c">Get location of executing assembly in C#</a></h2>
+<p>See <a href="https://www.red-gate.com/simple-talk/blogs/c-getting-the-directory-of-a-running-executable/">this</a>:</p>
+<pre><code class="language-cs">public static DirectoryInfo GetExecutingDirectory()
+{
+        var location = new Uri(Assembly.GetEntryAssembly().GetName().CodeBase);
+        return new FileInfo(location.AbsolutePath).Directory;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="python-check-object-reference-equality"><a class="header" href="#python-check-object-reference-equality">Python check object reference equality</a></h1>
+<p>Use the <code>is</code> operator. See simple linked list example below</p>
+<pre><code>&gt;&gt; class Node:
+...   def __init__(self,val):
+...     self.val = val
+...     self.next = None
+... 
+&gt;&gt;&gt; a = Node(5)
+&gt;&gt;&gt; a.next = Node(6)
+&gt;&gt;&gt; b = a.next
+&gt;&gt;&gt; b is a.next
+True
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wdf-driver-generic-architecture"><a class="header" href="#wdf-driver-generic-architecture">WDF Driver Generic Architecture</a></h1>
+<p><img src="2025-07-29-18-39-34.png" alt=""></p>
+<ul>
+<li><code>IOCTL</code>s are used to execute commands that the Application needs. Driver implements a list of IOCTLs in a huge switch statement.</li>
+<li><code>WdfRequestRetrieveInputBuffer</code> is used to get handle to the input buffer from the driver source code</li>
+<li><code>WdfRequestRetrieveOutputBuffer</code> is used to get handle to output buffer from driver src. Driver places results of operation into the output buffer.</li>
+<li><code>DeviceIoControl</code> is invoked by the interface library.</li>
+<li>After the call to <code>DeviceIoControl</code>, the output buffer is retrieved and returned to the application.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="disable-lso"><a href="#disable-lso" class="header">Disable LSO</a></h1>
+<h2 id="disabling-lso"><a class="header" href="#disabling-lso">Disabling LSO</a></h2>
+<p>This improves network performance on WSL (e.g. when using <code>apt</code>):</p>
+<pre><code class="language-ps1">Get-NetAdapter | Select-Object -ExpandProperty Name
+</code></pre>
+<p>Sample Outputs:</p>
+<pre><code>Ethernet 2
+vEthernet (WSL (Hyper-V firewall))
+Ethernet
+Bluetooth Network Connection
+Wi-Fi
+</code></pre>
+<p>Then issue the following command:</p>
+<pre><code class="language-ps1">Disable-NetAdapterLso -Name "vEthernet (WSL (Hyper-V firewall))" -IPv4 -IPv6
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="image-montage-with-ffmpeg"><a href="#image-montage-with-ffmpeg" class="header">Image Montage with ffmpeg</a></h1>
+<h2 id="image-montage-using-ffmpeg"><a class="header" href="#image-montage-using-ffmpeg">Image Montage using <code>ffmpeg</code></a></h2>
+<p>See bash script below, adapted from <a href="https://bentalbot.com/posts/creating-montage-videos-with-ffmpeg">here</a></p>
+<pre><code class="language-sh">#!/usr/bin/env bash
+
+set -euo pipefail
+
+SECONDS_PER_IMAGE=5
+
+TMP_DIR=".tmp"
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Configuration
+SECONDS_PER_IMAGE=5
+AUDIO_FILE="${1:-}"  # First argument: path to audio file (optional)
+
+TMP_DIR=".tmp"
+FILES_LIST="$TMP_DIR/.files"
+OUTPUT="output.mp4"
+
+VF="scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30"
+
+# Clean up previous outputs
+rm -r "$TMP_DIR" "$OUTPUT" || true
+mkdir "$TMP_DIR"
+
+# Convert all videos to standard format
+find . -maxdepth 1 -regex '.*\(mp4\|MP4\)' | while read i; do
+  ffmpeg -y -i "$i" -vf "$VF" -ar 44100 "$TMP_DIR/$i" &lt; /dev/null
+  echo "file '$i'" &gt;&gt; "$FILES_LIST"
+done
+
+# Convert all images to videos
+find . -maxdepth 1 -regex '.*\(jpe?g\|png\|JPG\|bmp\)' | while read i; do
+  ffmpeg -y -loop 1 -i "$i" -t "$SECONDS_PER_IMAGE" -vf "$VF" \
+    "$TMP_DIR/$i.mp4" &lt; /dev/null
+  echo "file '$i.mp4'" &gt;&gt; "$FILES_LIST"
+done
+
+# Shuffle the media files
+shuf -o "$FILES_LIST" "$FILES_LIST"
+
+# Find first video with audio and move to top
+first=
+while read f; do
+  fn="$(echo "$f" | sed "s/^file '//; s/'$//")"
+  if ffprobe "$fn" 2&gt;&amp;1 | grep -q 'Audio:'; then
+    first="$fn"
+  fi
+done &lt; "$FILES_LIST"
+if [ -n "$first" ]; then
+  { echo "file '$first'"; cat "$FILES_LIST"; } | awk '!seen[$0]++' &gt; files
+  mv files "$FILES_LIST"
+fi
+
+# Concatenate videos and optionally add audio overlay
+if [ -n "$AUDIO_FILE" ]; then
+  if [ ! -f "$AUDIO_FILE" ]; then
+    echo "Error: Audio file '$AUDIO_FILE' not found"
+    exit 1
+  fi
+
+  echo "Adding audio overlay from: $AUDIO_FILE"
+
+  # First, create the concatenated video without final audio
+  TMP_VIDEO="$TMP_DIR/concat_video.mp4"
+  ffmpeg -y -f concat -safe 0 -i "$FILES_LIST" -c copy "$TMP_VIDEO"
+
+  # Then overlay the audio track
+  # -stream_loop -1: loop audio if shorter than video
+  # -shortest: end output when shortest input ends (video duration)
+  # -map 0:v:0: take video from first input (concatenated video)
+  # -map 1:a:0: take audio from second input (audio file)
+  # -c:v copy: copy video without re-encoding
+  # -c:a aac: encode audio as AAC
+  ffmpeg -y -stream_loop -1 -i "$TMP_VIDEO" -i "$AUDIO_FILE" \
+    -map 0:v:0 -map 1:a:0 -shortest -c:v copy -c:a aac -b:a 192k "$OUTPUT"
+
+  echo "Montage created with audio overlay: $OUTPUT"
+else
+  # Original behavior: concatenate without audio overlay
+  ffmpeg -y -f concat -safe 0 -i "$FILES_LIST" "$OUTPUT"
+  echo "Montage created: $OUTPUT"
+fi
+
+echo "Done!"
+
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="github-actions-github_env"><a href="#github-actions-github_env" class="header">GitHub Actions GITHUB_ENV</a></h1>
+<h2 id="github-actions-notes"><a class="header" href="#github-actions-notes">GitHub Actions Notes</a></h2>
+<p><code>$GITHUB_ENV</code> is a GitHub Actions environment file that allows you to set environment variables that persist across steps within a job.</p>
+<p>How It Works
+When you write to <code>$GITHUB_ENV</code>, you’re appending to a special file that GitHub Actions reads between steps. Any variables written to this file become available as environment variables in subsequent steps.</p>
+<pre><code class="language-sh">echo "VARIABLE_NAME=value" &gt;&gt; $GITHUB_ENV
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
